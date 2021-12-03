@@ -122,7 +122,7 @@ While stateful components have state and the ability to keep track of changing d
 
 2. When does a componentWillMount function be called? What about a componentWillUpdate?
 
-The componentWillMount function is used to implement server-side logic before actual rendering happens (making API call to server), and is called as soon as the render method is called for the very first time in the application. The componentWillUpdate function is similar to componentWillMount, except it is called every time a re-render is required (like when this.setState() is called). 
+The componentWillMount function is used to implement server-side logic before actual rendering happens (making API call to server), and is called twice; once to the server and once to the client, ultimately as soon as the render method is called for the very first time in the application. The componentWillUpdate function is similar to componentWillMount, except it is called every time a re-render is required (like when this.setState() is called). The componentWillUpdate is basically called before component is updated or when state or props passed to the component is changed.
 
 3. Define stateful logic.
 
