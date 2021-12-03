@@ -84,9 +84,9 @@ In this project, you will build the retrieve data from a public api, add in a fa
 
 ### Testing the Checkout Form
 * [X] Run the test runner and ensure that `src/components/CheckoutForm.test.js` is correctly called.
-* [ ] Fill out code necessary to test that that Checkout form renders without errors.
-* [ ] Fill out code necessary to test that when all form inputs are filled with valid data, a success message appears.
-* [ ] Make sure the tests are passing, and make sure you can cause the tests to fail purposefully, so that you know the tests are truly working.
+* [X] Fill out code necessary to test that that Checkout form renders without errors.
+* [X] Fill out code necessary to test that when all form inputs are filled with valid data, a success message appears.
+* [X] Make sure the tests are passing, and make sure you can cause the tests to fail purposefully, so that you know the tests are truly working.
 
 ## Important Notes:
 * Again, unlike other projects, the local server used here can not be accessed through the browser. For this and the rest of your sprint challenges, test the functioning of the server directly through your axios calls.
@@ -107,10 +107,10 @@ test("displays plants in cart", () => {
 ```
 
 ## Submission format
-* [ ] Submit via Codegrade by committing and pushing any new changes to **your main branch.**
-* [ ] Check Codegrade before the deadline to compare its results against your local tests.
-* [ ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
-* [ ] New commits will be evaluated by Codegrade if pushed before the sprint challenge deadline.
+* [X] Submit via Codegrade by committing and pushing any new changes to **your main branch.**
+* [X] Check Codegrade before the deadline to compare its results against your local tests.
+* [X] Check Codegrade on the days following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
+* [X] New commits will be evaluated by Codegrade if pushed before the sprint challenge deadline.
 
 ## Interview Questions
 
@@ -118,8 +118,16 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What are the main differences between a stateful and a functional component?
 
+While stateful components have state and the ability to keep track of changing data, functional components do not have state and are "stateless". Additionally, stateful components have the render method and constructor, while functional components do not.
+
 2. When does a componentWillMount function be called? What about a componentWillUpdate?
+
+The componentWillMount function is used to implement server-side logic before actual rendering happens (making API call to server), and is called as soon as the render method is called for the very first time in the application. The componentWillUpdate function is similar to componentWillMount, except it is called every time a re-render is required (like when this.setState() is called). 
 
 3. Define stateful logic.
 
+Stateful logic is for reuse purposes and helps to create more DRY code while making testing easy. Stateful logic highlights the importance of separation of concerns, such that each component, module, and function should be as small as possible while doing one thing.
+
 4. What are the three step of creating a successful test? What is done in each phase? 
+
+Arrange -> Act -> Assert. Within the arrange phase, setup the react component that is being tested. Within the act phase, execute our behavior should there be one in the first place. Lastly, in the assert phase, we extract response elements and check if it is what we expect it to be, if necessary.
