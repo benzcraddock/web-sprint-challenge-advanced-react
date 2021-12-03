@@ -3,12 +3,8 @@ import { useState } from 'react';
 
 const useForm = (initialValue) => {
     const [values, setValues] = useState(initialValue);
-    const handleChanges = updatedValues => {
-      setValues(updatedValues);
-    }
-
-    return [values, setValues, handleChanges];
-
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+    return [values, setValues, showSuccessMessage, setShowSuccessMessage];
 }
 
 export default useForm;
